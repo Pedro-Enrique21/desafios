@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --background-color-input: #ffffff;
+    --border-input-radius: 10px;
+    --border-input: 1px solid black;
+    --border-date: 2px solid black;
+    --border-date__valid: 2px solid rgb(0, 255, 0);
+    --transition-bottom: border-bottom .7s;
+    --transition-background__submit: background-color .7s;
+    --transition-color__link: color .7s;
+}
+
+html {
+    font-family: roboto;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, rgb(0, 20, 36), rgb(0, 32, 58));
+    margin: 0;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(0deg, rgb(0, 255, 234), rgb(0, 140, 255));
+    border-radius: 2rem;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4em;
+    background-color: white;
+    padding: 2em;
+    width: 30em;
+    margin: 0 2em;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: var(--border-input-radius);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.521);
+}
+
+.container1-fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.container1-fieldset .labeltitle {
+    margin-left: 1em;
+}
+
+.img-title {
+    width: fit-content;
+    display: inline;
+    background-color: red;
+}
+
+.container1-fieldset legend {
+    font-weight: 300;
+    font-size: 1.6em;
+    margin: 1em;
+
+}
+
+.container1-fieldset__cadastro {
+    margin-bottom: 1em;
+    margin-top: .3em;
+    padding: 1em;
+    font-size: .8em;
+    background-color: var(--background-color-input);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    transition: border-bottom .7s, padding-left .7s;
+}
+
+.container1-fieldset__cadastro:focus {
+    padding-left: 1.5em;
+}
+
+.container1-fieldset__cadastro1:valid {
+    border-bottom: 2px solid rgb(0, 255, 0);
+}
+
+.container1-fieldset__cadastro::placeholder {
+    color: rgb(83, 83, 83);
+}
+
+.container1-fieldset__date {
+    width: fit-content;
+    padding: .5em;
+    margin-top: .3em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+    background-color: var(--background-color-input);
+    border: none;
+    border-bottom: var(--border-date);
+    outline: none;
+    color: black;
+    transition: var(--transition-bottom)
+}
+
+.container1-fieldset__date:valid {
+    border-bottom: 2px solid rgb(0, 255, 0);
+}
+
+.interessecontainer {
+    margin-bottom: 1em;
+    margin-top: .3em;
+    margin-left: 1em;
+    display: flex;
+}
+
+.labelinteresse {
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: .3em;
+    cursor: pointer;
+}
+
+.interessecontainer input {
+    display: none;
+}
+
+label span {
+    display: inline-block;
+    border-top: 2px solid #00c3ff;
+    border-right: 2px solid#00c3ff;
+    border-bottom: 2px solid #007092;
+    border-left: 2px solid #007092;
+    width: 30px;
+    height: 30px;
+
+}
+
+.interessecontainer input[type="checkbox"]:checked+label span {
+    background-image: linear-gradient(45deg, #007092, #00c3ff)
+}
+
+.interessecontainer input[type="checkbox"]:checked+label span::after {
+    content: url(imagens/icon.svg);
+    margin-left: .30em;
+
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.container-btn__p {
+    display: flex;
+    gap: .4em;
+    align-items: center;
+}
+
+.container-btn__p img {
+    width: 1.6em;
+}
+
+.container-btn .btn {
+    width: fit-content;
+    padding: 1em;
+    font-size: .8em;
+    font-weight: bold;
+    border: none;
+    border-radius: .4em;
+    background-color: rgb(0, 174, 255);
+    color: white;
+    cursor: pointer;
+    margin-right: .6em;
+    transition: var(--transition-background__submit)
+}
+
+.container-btn .btn:hover {
+    background-color: rgb(0, 127, 185);
+}
+
+a {
+    color: rgb(0, 174, 255);
+    text-decoration: none;
+    transition: var(--transition-color__link)
+}
+
+a:hover {
+    color: rgb(0, 127, 185);
+}
+
+.cadastro-link {
+    text-align: right;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25em;
+    padding: 2em 3em;
+    font-size: 1.4em;
+    background-image: url(imagens/fundofundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    box-shadow: 0px 0 10px rgb(0, 0, 0);
+    color: white;
+}
+
+.container2 p {
+    width: 100%;
+}
