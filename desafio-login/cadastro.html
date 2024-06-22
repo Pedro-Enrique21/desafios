@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastre-se</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="container">
+        <fieldset class="bloco1">
+            <div class="container-title">
+                <legend>Cadastre-se</legend>
+                <div class="container-title__imagem">
+                    <img src="imagens/visual-studio-code-logo-png-transparent.png" alt="#">
+                </div>
+            </div>
+
+
+            <label for="user" class="description">USUÁRIO</label>
+            <input type="text" id="user" name="user" autocomplete="off" placeholder="digite seu nome de usuário..."
+                autofocus required class="cadastro cadastro1" minlength="5">
+
+            <label for="email" class="description">EMAIL</label>
+            <input type="email" id="email" autocomplete="off" placeholder="digite seu email..." name="email" required
+                class="cadastro cadastro1">
+
+            <label for="senha" class="description">SENHA</label>
+            <input type="password" id="senha" autocomplete="off" placeholder="digite sua senha..." name="senha" required
+                class="cadastro cadastro1" minlength="5">
+
+            <div class="container-btn">
+                <button type="submit" class="container-btn__submit">CADASTRAR-SE</button>
+                <div>Já possui cadastro? <a href="index.html">Faça login</a></div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
